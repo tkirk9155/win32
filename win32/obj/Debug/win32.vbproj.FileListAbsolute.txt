@@ -8,3 +8,12 @@ C:\Users\tkirk\Desktop\WORKING\win32\win32\obj\Debug\win32.dll
 C:\Users\tkirk\Desktop\WORKING\win32\win32\obj\Debug\win32.xml
 C:\Users\tkirk\Desktop\WORKING\win32\win32\obj\Debug\win32.pdb
 C:\Users\tkirk\Desktop\WORKING\win32\win32\obj\Debug\win32.vbprojAssemblyReference.cache
+C:\Users\Cadie\source\repos\win32\win32\bin\Debug\win32.dll
+C:\Users\Cadie\source\repos\win32\win32\bin\Debug\win32.pdb
+C:\Users\Cadie\source\repos\win32\win32\bin\Debug\win32.xml
+C:\Users\Cadie\source\repos\win32\win32\obj\Debug\win32.Resources.resources
+C:\Users\Cadie\source\repos\win32\win32\obj\Debug\win32.vbproj.GenerateResource.cache
+C:\Users\Cadie\source\repos\win32\win32\obj\Debug\win32.vbproj.CoreCompileInputs.cache
+C:\Users\Cadie\source\repos\win32\win32\obj\Debug\win32.dll
+C:\Users\Cadie\source\repos\win32\win32\obj\Debug\win32.xml
+C:\Users\Cadie\source\repos\win32\win32\obj\Debug\win32.pdb

@@ -10,6 +10,13 @@ Public Class Main
     Public Delegate Function ShellProc(ByVal nCode As Integer, ByVal wParam As IntPtr, ByVal lParam As IntPtr) As Integer
     Public Delegate Function CBTProc(ByVal nCode As Integer, ByVal wParam As IntPtr, ByVal lParam As IntPtr) As Integer
 
+    <DllImport("user32.dll")>
+    Public Shared Function SendInput(ByVal nInputs As Integer,
+                                      ByVal pInputs() As INPUT,
+                                      ByVal cbSize As Integer) As Integer
+    End Function
+
+
     <DllImport("User32.dll")>
     Public Shared Sub mouse_event(dwFlags As UInteger,
                                   dx As UInteger,
@@ -581,6 +588,45 @@ Public Class Main
         ShowDefault = 10
         ForceMinimize = 11
     End Enum
+
+    Public Enum INPUT_TYPE As Integer
+        KeyDown = &H0
+        KeyUp = &H2
+    End Enum
+
+    <StructLayout(LayoutKind.Explicit)>
+    Public Structure INPUT
+        'Field offset 32 bit machine 4
+        '64 bit machine 8
+        <FieldOffset(0)>
+        Public type As Integer
+        <FieldOffset(8)>
+        Public mi As MOUSEINPUT
+        <FieldOffset(8)>
+        Public ki As KEYBDINPUT
+        <FieldOffset(8)>
+        Public hi As HARDWAREINPUT
+    End Structure
+    Public Structure MOUSEINPUT
+        Public dx As Integer
+        Public dy As Integer
+        Public mouseData As Integer
+        Public dwFlags As Integer
+        Public time As Integer
+        Public dwExtraInfo As IntPtr
+    End Structure
+    Public Structure KEYBDINPUT
+        Public wVk As Short
+        Public wScan As Short
+        Public dwFlags As Integer
+        Public time As Integer
+        Public dwExtraInfo As IntPtr
+    End Structure
+    Public Structure HARDWAREINPUT
+        Public uMsg As Integer
+        Public wParamL As Short
+        Public wParamH As Short
+    End Structure
 
     Public Enum MouseEventFlags As UInteger
         LEFTDOWN = &H2
